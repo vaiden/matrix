@@ -16,6 +16,7 @@ build1:
 
 
 test1:
+  image: pyfunceble:latest
   stage: test
   script:
     - echo "Do a test here"

@@ -5,7 +5,7 @@ image: pyfunceble/pyfunceble:latest
 
 before_script:
   - echo "Before script section"
-  - echo "For example you might run an update here or install a build dependency"
+  - echo "This is the pyfunceble test"
   - echo "Or perhaps you might print out some debugging details"
 
 after_script:
@@ -16,13 +16,14 @@ build1:
   stage: build
   script:
     - echo "Do your build here"
+    - echo "This is the pyfunceble test"
 
 
 test1:
   stage: test
   script:
     - echo "Do a test 1 here"
-    - echo "For example run a test suite"
+    - echo "For pyfunceble test suite"
     # split over multiply lines
     # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
     - docker run -it pyfunceble/pyfunceble --version
@@ -32,11 +33,11 @@ test2:
   stage: test
   script:
     - echo "Do another parallel test here"
-    - echo "For example run a lint test"
+    - echo "For pyfunceble a lint test"
     - docker run -it pyfunceble/pyfunceble --help
     - docker run -it -v ${PWD}/inside:/home/pyfunceble -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock pyfunceble/pyfunceble -f source/adware/wildcard.list
 
 deploy1:
   stage: deploy
   script:
-    - echo "Do your deploy here"
+    - echo "Do your Super deploy here"

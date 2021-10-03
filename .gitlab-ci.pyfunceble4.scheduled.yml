@@ -25,7 +25,7 @@ test1:
     - echo "For example run a test suite"
     # split over multiply lines
     # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
-    - >
+    - |
       docker run -it -v ${PWD}/inside:/home/pyfunceble
       -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock
       pyfunceble/pyfunceble -f source/adware/domains.list

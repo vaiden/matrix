@@ -1,4 +1,4 @@
-image: docker pull pyfunceble/pyfunceble:latest
+image: pyfunceble/pyfunceble:latest
 
 before_script:
   - echo "Before script section"

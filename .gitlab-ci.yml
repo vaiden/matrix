@@ -43,7 +43,7 @@ build:
     #     $i; print $1}' \;
 
 test1:
-  image: docker pull pyfunceble/pyfunceble:latest
+  image: pyfunceble/pyfunceble:latest
   stage: test
   only:
     - merge_requests

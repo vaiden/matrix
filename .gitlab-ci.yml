@@ -19,7 +19,7 @@ before_script:
   - git remote set-url origin https://mypdns:$mypdns_CI_ACCESS_TOKEN@mypdns.org/$CI_PROJECT_PATH.git
 
 variables:
-  VARIABLES_FILE: ./variables.txt
+  VARIABLES_FILE: ./variables.txt # Thanks to https://stackoverflow.com/a/60674733
 
 after_script:
   - echo "After script section"
@@ -47,18 +47,17 @@ build:
 
 test1:
   stage: test
-  # only:
-  #   - merge_requests
-  script:
-    - echo "Do a syntax test here"
-    - echo "Pyfunceble Syntax test suite"
-    - pip3 install -q mypdns 'pyfunceble>=4.0.0'
-
-    - pyfunceble --version
-    - pyfunceble --syntax --no-files -f source/coin-blocker/combined.txt
   artifacts:
     paths:
       - $VARIABLES_FILE
+  # only:
+  #   - merge_requests
+  script:
+    - echo "Pyfunceble Syntax test suite"
+    - pip3 install -q mypdns 'pyfunceble>=4.0.0'
+    - pyfunceble --version
+    - pyfunceble --syntax --no-files -f source/coin-blocker/combined.txt
+
 
 # test1:
 #   stage: test

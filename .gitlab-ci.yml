@@ -54,6 +54,7 @@ test1:
     # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
     - >
       pyfunceble --version
+    - pyfunceble --syntax --no-files -f source/coin-blocker/domains.list
 
 
 # test1:

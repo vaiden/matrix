@@ -17,8 +17,6 @@ build1:
 
 test1:
   stage: test
-  only:
-    - merge_requests
   script:
     - echo "Do a test here"
     - echo "For example run a test suite"

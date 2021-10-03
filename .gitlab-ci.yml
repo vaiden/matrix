@@ -19,9 +19,7 @@ before_script:
   - git remote set-url origin https://mypdns:$mypdns_CI_ACCESS_TOKEN@mypdns.org/$CI_PROJECT_PATH.git
 
 variables:
-  - 'PYFUNCEBLE_AUTO_CONFIGURATION: "YES"'
-  - 'PYFUNCEBLE_CONFIG_DIR: "$CI_PROJECT_DIR/.pyfunceble"'
-  - 'PYFUNCEBLE_OUTPUT_LOCATION: "$CI_PROJECT_DIR/.pyfunceble"'
+  VARIABLES_FILE: ./variables.txt
 
 after_script:
   - echo "After script section"
@@ -55,12 +53,12 @@ test1:
     - echo "Do a syntax test here"
     - echo "Pyfunceble Syntax test suite"
     - pip3 install -q mypdns 'pyfunceble>=4.0.0'
-    # split over multiply lines
-    # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
-    - >
-      pyfunceble --version
-    - pyfunceble --syntax --no-files -f source/coin-blocker/combined.txt
 
+    - pyfunceble --version
+    - pyfunceble --syntax --no-files -f source/coin-blocker/combined.txt
+  artifacts:
+    paths:
+      - $VARIABLES_FILE
 
 # test1:
 #   stage: test

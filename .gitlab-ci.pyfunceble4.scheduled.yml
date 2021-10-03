@@ -17,15 +17,13 @@ build1:
 
 test1:
   stage: test
-  only:
-    - merge_requests
   script:
-    - echo "Do a test here"
+    - echo "Do a test 1 here"
     - echo "For example run a test suite"
     # split over multiply lines
     # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
     - >
-      sudo docker run -it -v ${PWD}/inside:/home/pyfunceble
+      docker run -it -v ${PWD}/inside:/home/pyfunceble
       -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock
       pyfunceble/pyfunceble -f source/adware/domains.list
 
@@ -34,6 +32,10 @@ test2:
   script:
     - echo "Do another parallel test here"
     - echo "For example run a lint test"
+    - >
+      docker run -it -v ${PWD}/inside:/home/pyfunceble
+      -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock
+      pyfunceble/pyfunceble -f source/adware/wildcard.list
 
 deploy1:
   stage: deploy

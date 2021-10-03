@@ -56,7 +56,25 @@ test1:
     - echo "Pyfunceble Syntax test suite"
     - pip3 install -q mypdns 'pyfunceble>=4.0.0'
     - pyfunceble --version
-    - pyfunceble --syntax --no-files -f source/coin-blocker/combined.txt
+    - |
+      pyfunceble --syntax --no-files -f "$CI_PROJECT_DIR/source/coin-blocker/combined.txt"
+      "$CI_PROJECT_DIR/source/adware/combined.txt"
+      "$CI_PROJECT_DIR/source/bait_sites/combined.txt"
+      "$CI_PROJECT_DIR/source/coin-blocker/combined.txt"
+      "$CI_PROJECT_DIR/source/dns-servers/wildcard.rpz-nsdname"
+      "$CI_PROJECT_DIR/source/fake-news/domains.list"
+      "$CI_PROJECT_DIR/source/gambling/combined.txt"
+      "$CI_PROJECT_DIR/source/ip-network-blocking/combined.txt"
+      "$CI_PROJECT_DIR/source/malicious/combined.txt"
+      "$CI_PROJECT_DIR/source/phishing/combined.txt"
+      "$CI_PROJECT_DIR/source/redirector/combined.txt"
+      "$CI_PROJECT_DIR/source/scamming/combined.txt"
+      "$CI_PROJECT_DIR/source/sharked-domains/combined.txt"
+      "$CI_PROJECT_DIR/source/spyware/combined.txt"
+      "$CI_PROJECT_DIR/source/tracking/combined.txt"
+      "$CI_PROJECT_DIR/source/typosquatting/combined.txt"
+      "$CI_PROJECT_DIR/source/porno-sites/combined.txt"
+      "$CI_PROJECT_DIR/source/porno-sites/wildcard.list.old"
 
 
 # test1:

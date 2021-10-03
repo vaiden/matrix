@@ -56,7 +56,7 @@ test1:
     - echo "Pyfunceble Syntax test suite"
     - pip3 install -q mypdns 'pyfunceble>=4.0.0'
     - pyfunceble --version
-    - |
+    - >
       pyfunceble --syntax --no-files -f "$CI_PROJECT_DIR/source/coin-blocker/combined.txt"
       "$CI_PROJECT_DIR/source/adware/combined.txt"
       "$CI_PROJECT_DIR/source/bait_sites/combined.txt"

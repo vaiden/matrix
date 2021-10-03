@@ -43,7 +43,7 @@ build:
     #     $i; print $1}' \;
 
 test1:
-  image: pyfunceble:latest
+  image: docker pull pyfunceble/pyfunceble:latest
   stage: test
   only:
     - merge_requests
@@ -57,6 +57,7 @@ test1:
       -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock
       pyfunceble/pyfunceble --version
 
+include: .gitlab-ci.pyfunceble4.scheduled.yml
 
 # test1:
 #   stage: test

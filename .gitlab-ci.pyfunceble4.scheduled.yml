@@ -1,4 +1,4 @@
-image: pyfunceble:latest
+image: docker pull pyfunceble/pyfunceble:latest
 
 before_script:
   - echo "Before script section"
@@ -16,8 +16,9 @@ build1:
 
 
 test1:
-  image: pyfunceble:latest
   stage: test
+  only:
+    - merge_requests
   script:
     - echo "Do a test here"
     - echo "For example run a test suite"

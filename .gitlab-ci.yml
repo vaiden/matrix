@@ -49,7 +49,7 @@ test1:
   script:
     - echo "Do a syntax test here"
     - echo "Pyfunceble Syntax test suite"
-    - pip3 install -q mypdns pyfunceble>=4.0.0
+    - 'pip3 install -q mypdns pyfunceble>=4.0.0'
     # split over multiply lines
     # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
     - >

@@ -17,6 +17,9 @@ before_script:
   - git config --global user.email "pdns@pm.me"
   - git config --global user.name "My Privacy DNS"
   - git remote set-url origin https://mypdns:$mypdns_CI_ACCESS_TOKEN@mypdns.org/$CI_PROJECT_PATH.git
+  - PYFUNCEBLE_AUTO_CONFIGURATION: 'YES'
+  - PYFUNCEBLE_CONFIG_DIR: '${{ CI_PROJECT_DIR }}/.pyfunceble'
+  - PYFUNCEBLE_OUTPUT_LOCATION: '${{ CI_PROJECT_DIR }}/.pyfunceble'
 
 after_script:
   - echo "After script section"
@@ -54,7 +57,7 @@ test1:
     # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
     - >
       pyfunceble --version
-    - pyfunceble --syntax --no-files -f source/coin-blocker/domains.list
+    - pyfunceble --syntax --no-files -f source/coin-blocker/combined.txt
 
 
 # test1:

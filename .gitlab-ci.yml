@@ -42,6 +42,22 @@ build:
     #     "{}" | sort -u | awk -F "." '{for(i=NF; i > 1; i--) printf "%s.", \
     #     $i; print $1}' \;
 
+test1:
+  image: pyfunceble:latest
+  stage: test
+  only:
+    - merge_requests
+  script:
+    - echo "Do a test here"
+    - echo "For example run a test suite"
+    # split over multiply lines
+    # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
+    - >
+      sudo docker run -it -v ${PWD}/inside:/home/pyfunceble
+      -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock
+      pyfunceble/pyfunceble --version
+
+
 # test1:
 #   stage: test
 #   script:

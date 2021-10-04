@@ -50,7 +50,7 @@ test1:
   stage: test
   image: pyfunceble/pyfunceble:latest
   script:
-    - docker run -it pyfunceble/pyfunceble --version
+    - docker run -it "pyfunceble/pyfunceble --version"
     - docker run -it -v '"/var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock"' pyfunceble/pyfunceble --version #-f source/adware/domains.list
 
 test2:

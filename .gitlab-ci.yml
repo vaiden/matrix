@@ -20,6 +20,9 @@ before_script:
 
 variables:
   VARIABLES_FILE: ./variables.txt # Thanks to https://stackoverflow.com/a/60674733
+  PYFUNCEBLE_AUTO_CONFIGURATION: YES
+  PYFUNCEBLE_CONFIG_DIR: "$CI_PROJECT_DIR/.pyfunceble"
+  PYFUNCEBLE_OUTPUT_LOCATION: "$CI_PROJECT_DIR/.pyfunceble"
 
 after_script:
   - echo "After script section"
@@ -50,7 +53,10 @@ test1:
   stage: test
   image: pyfunceble/pyfunceble:latest
   script:
-    - bash "$CI_PROJECT_DIR/scripts/pydocker.sh"
+    - echo ""
+    - echo "PyFunceble test"
+    - echo ""
+    - sudo bash "$CI_PROJECT_DIR/scripts/pydocker.sh"
 
 
 test2:
@@ -65,7 +71,7 @@ test2:
     - pip3 install -q mypdns 'pyfunceble>=4.0.0'
     - pyfunceble --version
     - >
-      pyfunceble --syntax --no-files -q --dots -f
+      pyfunceble --syntax --no-files --dots -f
       "$CI_PROJECT_DIR/source/coin-blocker/combined.txt"
       "$CI_PROJECT_DIR/source/adware/combined.txt"
 

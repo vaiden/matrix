@@ -15,5 +15,15 @@ after_script:
 build:
   stage: build
   script:
+    - echo "1"
+    - echo "2"
+    - echo "3"
+    - echo "4"
+    - echo "5"
+    - echo "6"
+    - echo "7"
+    - echo "8"
+    - echo "9"
+    - echo "10"
     # - docker container ls -a
-    - docker run -it pyfunceble/pyfunceble [--version]
+    - docker run -it pyfunceble/pyfunceble `--version`

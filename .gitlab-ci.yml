@@ -26,4 +26,4 @@ build:
     - echo "9"
     - echo "10"
     # - docker container ls -a
-    - docker run -it pyfunceble/pyfunceble `--version`
+    - docker run -it pyfunceble/pyfunceble --version

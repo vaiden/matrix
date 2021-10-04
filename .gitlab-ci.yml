@@ -12,15 +12,8 @@ after_script:
   - echo "After script section"
   - echo "For example you might do some cleanup here"
 
-# build1:
-#   stage: build
-#   script:
-#     - echo "Do your build here"
-#     - echo "This is the pyfunceble test"
-
-
-test1:
-  stage: test
+build:
+  stage: build
   script:
     # - docker container ls -a
-    - docker run -it pyfunceble/pyfunceble --version
+    - docker run -it pyfunceble/pyfunceble [--version]

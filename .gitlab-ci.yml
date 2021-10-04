@@ -12,32 +12,14 @@ after_script:
   - echo "After script section"
   - echo "For example you might do some cleanup here"
 
-build1:
-  stage: build
-  script:
-    - echo "Do your build here"
-    - echo "This is the pyfunceble test"
+# build1:
+#   stage: build
+#   script:
+#     - echo "Do your build here"
+#     - echo "This is the pyfunceble test"
 
 
 test1:
   stage: test
   script:
-    - echo "Do a test 1 here"
-    - echo "For pyfunceble test suite"
-    # split over multiply lines
-    # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
     - docker run -it pyfunceble/pyfunceble --version
-    # - docker run -it -v '"/var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock"' pyfunceble/pyfunceble --version #-f source/adware/domains.list
-
-test2:
-  stage: test
-  script:
-    - echo "Do another parallel test here"
-    - echo "For pyfunceble a lint test"
-    - docker run -it pyfunceble/pyfunceble --help
-    # - docker run -it -v '"/var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock"' pyfunceble/pyfunceble --help
-
-deploy1:
-  stage: deploy
-  script:
-    - echo "Do your Super deploy here"

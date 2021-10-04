@@ -3,14 +3,14 @@ image: pyfunceble/pyfunceble:latest
 # only:
 #   - schedules
 
-before_script:
-  - echo "Before script section"
-  - echo "This is the pyfunceble test"
-  - echo "Or perhaps you might print out some debugging details"
+# before_script:
+#   - echo "Before script section"
+#   - echo "This is the pyfunceble test"
+#   - echo "Or perhaps you might print out some debugging details"
 
-after_script:
-  - echo "After script section"
-  - echo "For example you might do some cleanup here"
+# after_script:
+#   - echo "After script section"
+#   - echo "For example you might do some cleanup here"
 
 build:
   stage: build

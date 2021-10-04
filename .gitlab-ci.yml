@@ -20,7 +20,7 @@ before_script:
 
 variables:
   VARIABLES_FILE: ./variables.txt # Thanks to https://stackoverflow.com/a/60674733
-  PYFUNCEBLE_AUTO_CONFIGURATION: YES
+  PYFUNCEBLE_AUTO_CONFIGURATION: "YES"
   PYFUNCEBLE_CONFIG_DIR: "$CI_PROJECT_DIR/.pyfunceble"
   PYFUNCEBLE_OUTPUT_LOCATION: "$CI_PROJECT_DIR/.pyfunceble"
 

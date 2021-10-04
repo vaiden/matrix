@@ -1,0 +1,98 @@
+# you can delete this line if you're not using Docker
+# image: busybox:latest
+image: ubuntu:20.04
+
+variables:
+  GIT_DEPTH: 2
+
+before_script:
+  - echo "Before script section"
+  - echo "For example you might run an update here or install a build dependency"
+  - echo "Or perhaps you might print out some debugging details"
+  - export DEBIAN_FRONTEND=noninteractive
+  - apt-get update
+  - apt-get install -yqqf bash git pgp python3-pip
+  # - git config --global user.email "$GITLAB_USER_EMAIL"
+  # - git config --global user.name "$GIT_USER_NAME"
+  - git config --global user.email "pdns@pm.me"
+  - git config --global user.name "My Privacy DNS"
+  - git remote set-url origin https://mypdns:$mypdns_CI_ACCESS_TOKEN@mypdns.org/$CI_PROJECT_PATH.git
+
+variables:
+  VARIABLES_FILE: ./variables.txt # Thanks to https://stackoverflow.com/a/60674733
+  PYFUNCEBLE_AUTO_CONFIGURATION: "YES"
+  PYFUNCEBLE_CONFIG_DIR: "$CI_PROJECT_DIR/.pyfunceble"
+  PYFUNCEBLE_OUTPUT_LOCATION: "$CI_PROJECT_DIR/.pyfunceble"
+
+after_script:
+  - echo "After script section"
+  - echo "For example you might do some clean up here"
+  - echo -e "After script section...\n"
+  - git add .
+  - git commit -m "Source sorted by CI runner `date '+%F %T %Z %z'`"
+  - git status
+  - git push "https://mypdns:${MYPDNS_CI_ACCESS_TOKEN}@${CI_REPOSITORY_URL#*@}" "HEAD:${CI_COMMIT_REF_NAME}" -o skip-ci
+
+build:
+  stage: build
+  only:
+    - master
+    - push
+  script:
+    - echo "Do your build here"
+    - pip3 install -q mypdns
+    # - git checkout -b "${CI_COMMIT_REF_NAME}"
+    - find "$CI_PROJECT_DIR/source/" -type f -name '*.list' -exec bash -c "sort -i -u -f '{}' -o '{}' " \;
+    # - find "${CI_PROJECT_DIR}/source/" -type f -name '*.list' \
+    #     -exec awk -F "." '{for(i=NF; i > 1; i--) printf "%s.", $i; print $1}' \
+    #     "{}" | sort -u | awk -F "." '{for(i=NF; i > 1; i--) printf "%s.", \
+    #     $i; print $1}' \;
+
+
+test1:
+  stage: test
+  image: pyfunceble/pyfunceble:latest
+  script:
+    - echo ""
+    - echo "PyFunceble test"
+    - echo ""
+    - sudo bash "$CI_PROJECT_DIR/scripts/pydocker.sh"
+
+
+test2:
+  stage: test
+  artifacts:
+    paths:
+      - $VARIABLES_FILE
+  # only:
+  #   - merge_requests
+  script:
+    - echo "Pyfunceble Syntax test suite"
+    - pip3 install -q mypdns 'pyfunceble>=4.0.0'
+    - pyfunceble --version
+    - >
+      pyfunceble --syntax --no-files --dots -f
+      "$CI_PROJECT_DIR/source/coin-blocker/combined.txt"
+      "$CI_PROJECT_DIR/source/adware/combined.txt"
+
+
+# test1:
+#   stage: test
+#   script:
+#     - echo "Do a test here"
+#     - echo "For example run a test suite"
+
+# test2:
+#   stage: test
+#   script:
+#     - echo "Do another parallel test here"
+#     - echo "For example run a lint test"
+
+# deploy1:
+#   stage: deploy
+#   script:
+    # - echo "Do your deploy here"
+    # - git add .
+    # - git commit -m "Auto committed from the CI runner `date '+%F %T %Z %z'`"
+    # - git status
+    # - git push "https://${GITLAB_USER_LOGIN}:${MYPDNS_CI_ACCESS_TOKEN}@${CI_REPOSITORY_URL#*@}" "HEAD:${CI_COMMIT_REF_NAME}" -o skip-ci

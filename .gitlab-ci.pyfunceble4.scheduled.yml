@@ -27,7 +27,7 @@ test1:
     # split over multiply lines
     # https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
     - docker run -it pyfunceble/pyfunceble --version
-    - docker run -it -v '${PWD}/inside:/home/pyfunceble' -v '/var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock' pyfunceble/pyfunceble --version #-f source/adware/domains.list
+    - docker run -it -v '"/var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock"' pyfunceble/pyfunceble --version #-f source/adware/domains.list
 
 test2:
   stage: test
@@ -35,7 +35,7 @@ test2:
     - echo "Do another parallel test here"
     - echo "For pyfunceble a lint test"
     - docker run -it pyfunceble/pyfunceble --help
-    - docker run -it -v ${PWD}/inside:/home/pyfunceble -v /var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock pyfunceble/pyfunceble -f source/adware/wildcard.list
+    - docker run -it -v '"/var/run/mysqld/mysqld.sock:/var/run/mysqld/mysqld.sock"' pyfunceble/pyfunceble --help
 
 deploy1:
   stage: deploy

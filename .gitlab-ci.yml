@@ -26,4 +26,4 @@ run:
     - >
       pyfunceble --ci --syntax --no-files -f
       "$CI_PROJECT_DIR/source/coin-blocker/combined.txt"
-      "$CI_PROJECT_DIR/source/adware/combined.txt"
+      "$CI_PROJECT_DIR/source/bait_sites/combined.txt"

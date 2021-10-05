@@ -28,3 +28,4 @@ test1:
       pyfunceble --ci --syntax --no-files -f
       "$CI_PROJECT_DIR/source/adware/domains.list"
       "$CI_PROJECT_DIR/source/adware/wildcard.list"
+      --ci-max-minutes 5

@@ -16,8 +16,8 @@ before_script:
   # with `pyfunceble`.
   - pip3 install PyFunceble mypdns
 
-AdWare:
-  stege: test
+test1:
+  stage: test
   script:
     # Let's say we want our results and our PyFunceble
     # infrastructure to be saved in a directory called `PyFunceble-tests`

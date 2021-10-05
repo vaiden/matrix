@@ -24,6 +24,6 @@ run:
     # We move inside it.
     - cd "$CI_PROJECT_DIR"
     - >
-      pyfunceble --ci --syntax --no-files --dots -f
+      pyfunceble --ci --syntax --no-files -f
       "$CI_PROJECT_DIR/source/coin-blocker/combined.txt"
       "$CI_PROJECT_DIR/source/adware/combined.txt"

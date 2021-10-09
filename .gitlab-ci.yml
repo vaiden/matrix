@@ -6,6 +6,7 @@ variables:
   GIT_EMAIL: "pdns@pm.me"
   # This is the Git Email we have to set. (git config user.email)
   GIT_NAME: "My Privacy DNS"
+  GL_TOKEN: "$GL_TOKEN"
   PYFUNCEBLE_AUTO_CONFIGURATION: "YES"
   PYFUNCEBLE_CONFIG_DIR: "$CI_PROJECT_DIR/.pyfunceble"
   PYFUNCEBLE_OUTPUT_LOCATION: "$CI_PROJECT_DIR/.pyfunceble"

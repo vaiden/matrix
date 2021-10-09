@@ -220,6 +220,7 @@ adver.qq.com
 advert-creatives.s3.amazonaws.com
 advert.qq.com
 advertising.amazon.com
+advertising.apple.com
 advertising.microsoft.com
 advertising.scoop.co.nz
 advertising.yandex.ru
@@ -258,6 +259,7 @@ androidquery.appspot.com
 androidtvwatsonfe-pa.googleapis.com
 anvato-api-config.s3.amazonaws.com
 api-ad-adapter.wps.com
+api-adservices.apple.com
 api-dot-mwm-ab-testing.appspot.com
 api-dot-mwm-ad-mediation.appspot.com
 api-ntv-elb-1185445618.us-east-1.elb.amazonaws.com
@@ -325,6 +327,7 @@ baidu-spark-browser.en.softonic.com
 banner.dabi.ir
 banners.adultfriendfinder.com
 banners.cams.com
+banners.itunes.apple.com
 banners.spiceworks.com
 banners.videosz.com
 banners.virtuagirlhd.com
@@ -1106,7 +1109,6 @@ spyhunter-download.s3.amazonaws.com
 sqs.us-east-1.amazonaws.com
 sr2.liveperson.net
 ss.biquge.la
-ssp.adxpremium.com
 sstats.adobe.com
 static-shareaholic.s3.amazonaws.com
 static.adtidy.net

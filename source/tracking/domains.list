@@ -208,6 +208,7 @@ api.waptest.taobao.com
 appanalysis.banggood.com
 apphack.mobi
 apprep.smartscreen.microsoft.com
+apps.iad.apple.com
 appsbnet-a.akamaihd.net
 arc.msn.com
 as43dsawqa.appspot.com
@@ -216,6 +217,7 @@ asadg43sdsa.appspot.com
 asgh65tfsdxz.appspot.com
 audio-ak-spotify-com.akamaized.net
 audio-akp-spotify-com.akamaized.net
+autolinkmaker.itunes.apple.com
 auvm21.appspot.com
 awaps.yandex.ru
 axislogger.appspot.com
@@ -248,10 +250,12 @@ bigdata.qq.com
 bitdash-reporting.appspot.com
 bitmovin-bitanalytics.appspot.com
 black.ish.instagram.com
+blueprints.iad.apple.com
 bo934pesdisz.appspot.com
 bo9rsdpxoaz.appspot.com
 boksy.dir.onet.pl
 boksy.onet.pl
+books-analytics-events.apple.com
 boscdn.bpc.baidu.com
 bpc.baidu.com
 br.baidu.com
@@ -264,14 +268,17 @@ bug2.onlyfans.com
 bugsense.appspot.com
 c.hiphotos.baidu.com
 c.sibnet.ru
+ca.iadsdk.apple.com
 cahf4eed.mooo.com
 cards.twitter.com
 caspionlog.appspot.com
 cb.baidu.com
 cbjs.baidu.com
+ccportal.iad.apple.com
 ccsv9psos.appspot.com
 cdn.jsdelivr.net
 cdn.shopify.com
+cf.iadsdk.apple.com
 choice.microsoft.com
 chrome-devtools-frontend.appspot.com
 chrome.google.com
@@ -305,6 +312,7 @@ cmp.telerama.fr
 cmp.vg.no
 cmp.vglive.no
 cmstrendslog.indiatimes.com
+cmws.iad.apple.com
 cn-sc.scorecardresearch.com.edgekey.net
 cnameebis.usagi-online.com
 cnt.hd21.com
@@ -356,6 +364,7 @@ cpro.baidu.com
 craigreddickaieo24.appspot.com
 crwscdn.appspot.com
 crwscdn9.appspot.com
+cs.iadsdk.apple.com
 csi.gstatic.com
 csp-collector.appspot.com
 csr.onet.pl
@@ -497,6 +506,8 @@ device-metrics-us.amazon.com
 dfoagd9zxpsai.appspot.com
 diagnostics.support.microsoft.com
 dir.onet.pl
+display-apps-ui-soak.iad.apple.com
+display-apps-ui.iad.apple.com
 dj1.baidu.com
 djtflbt20bdde.cloudfront.net
 dl.p2sp.baidu.com
@@ -524,6 +535,7 @@ dxwgpw0lkcum5.cloudfront.net
 dy2xcjk8s1dbz.cloudfront.net
 dymlo6ffhj97l.cloudfront.net
 dyn-beacon.akamaized.net
+dynamic-goose.tk
 dyv1bugovvq1g.cloudfront.net
 dzl.baidu.com
 e-ddos.appspot.com
@@ -658,6 +670,10 @@ i.image-ad.jp
 i.instagram.com
 i.newssuite.sony.net
 i1.services.social.microsoft.com
+iad.apple.com
+iadfeed.iad.apple.com
+iadsdk.apple.com
+iadworkbench-soak.iad.apple.com
 ibeat.indiatimes.com
 ibeats.indiatimes.com
 ichnaea.netflix.com
@@ -689,6 +705,7 @@ ip-geo.appspot.com
 ip-info.ff.avast.com
 ip.taobao.com
 ipm-provider.ff.avast.com
+iris.iad.apple.com
 irty8pxzozx.appspot.com
 is-tracking-link-api-prod.appspot.com
 is-tracking-pixel-api-prod.appspot.com
@@ -724,6 +741,7 @@ lightboxapi2.azurewebsites.net
 lightboxapi3.azurewebsites.net
 lightstep-collectors-v2-lb-1870604286.us-east-1.elb.amazonaws.com
 link.getmailspring.com
+live-trace.bilibili.com
 location-inference-westus.cloudapp.net
 log.avlyun.com
 log.ca.gov.vn
@@ -770,6 +788,7 @@ media.onet.pl
 medisinkurs.appspot.com
 merlin.abc.go.com
 metrica.yandex.ru
+metrics.apple.com
 metrics.readme.io
 metrics.redgifs.com
 metrics.sky.com
@@ -795,12 +814,15 @@ nativex-sdk.appspot.com
 nav.files.bbci.co.uk
 nbsdk-baichuan.taobao.com
 neownesharepointdororescos.appspot.com
+neverending-story.cf
+news.iadsdk.apple.com
 nil.naver.com
 nlp-japan.life-and-mind.com
 nmetrics.samsung.com
 nmtracking.netflix.com
 no8lancelot.appspot.com
 nojsstats.appspot.com
+notes-analytics-events.apple.com
 novem.onet.pl
 nsclick.baidu.com
 nvcuiaoc0aspxzcs.appspot.com
@@ -839,6 +861,7 @@ ping-dot-acp-magento.appspot.com
 ping.hashnode.com
 piwik.disconnect.me
 piwik.information.dk
+pixel.coccoc.com
 pixel.ionos.fr
 pixel.runative-syndicate.com
 platform.instagram.com
@@ -900,6 +923,7 @@ scloud-dlsw.br.baidu.com
 sdkinit.taobao.com
 sealserver.trustwave.com
 securdserv1.appspot.com
+securemetrics.apple.com
 sedo.cachefly.net
 segment.hotstar.com
 sensytracker.appspot.com
@@ -909,7 +933,6 @@ service-api.accesstrade.vn
 services.zam.com
 settings-sandbox.data.microsoft.com
 settings-win.data.microsoft.com
-settings.crashlytics.com
 sgmnt.ticketswap.com
 sgqcvfjvr.onet.pl
 share.9cdn.net
@@ -948,6 +971,7 @@ stats.dbc.dk
 stats.esecured.net
 stats.extreme-down.work
 stats.fonecta.fi
+stats.gc.apple.com
 stats.grafikart.fr
 stats.hprofits.com
 stats.ign.com
@@ -960,9 +984,12 @@ stats.privacytools.io
 stats.pstream.net
 stats.vk-portal.net
 stats.zone-annuaire.casa
+stg-cmws.iad.apple.com
+stocks-analytics-events.apple.com
 store-images.s-microsoft.com
 storsimpleorder.azurewebsites.net
 stripecdn.map.fastly.net
+su.iadsdk.apple.com
 sugar.zhihu.com
 sunlightmetrics.b-cdn.net
 supertracker.flashget.com
@@ -1015,6 +1042,7 @@ top.mail.ru
 topd0zcpzapasdociasni.appspot.com
 topsellers-co-dot-yamm-track.appspot.com
 toyota-tagging-tagserver-prod.azurewebsites.net
+tr.iadsdk.apple.com
 tr.jianshu.com
 traccoon.intellectsoft.net
 trace.svc.ui.com
@@ -1037,6 +1065,7 @@ tracker.winudf.com
 tracker1.itzmx.com
 tracking-opi.fonpit.de
 tracking.aita.gov.vn
+tracking.chilipiper.com
 tracking.fits.me
 tracking.g2crowd.com
 tracking.game8.jp
@@ -1078,6 +1107,7 @@ unstat.baidu.com
 updown.mobileassist.baidu.com
 us01-analysis.ymcart.com
 us04logfiles.zoom.us
+ut.iadsdk.apple.com
 utility.baidu.com
 v.shopify.com
 v10.events.data.microsoft.com
@@ -1106,6 +1136,7 @@ wb.110.taobao.com
 wblt.oui.sncf
 wbmwss.beetv.net
 wcs.naver.com
+weather-analytics-events.apple.com
 webiq-cdn-hr.appspot.com
 webiq-cdn.appspot.com
 webiq-warp-hrd.appspot.com

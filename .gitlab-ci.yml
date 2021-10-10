@@ -2,20 +2,23 @@
 image: python:latest
 
 variables:
-  # This is the Git name we have to set. (git config user.name)
-  GIT_EMAIL: "pdns@pm.me"
-  # This is the Git Email we have to set. (git config user.email)
-  GIT_NAME: "My Privacy DNS"
-  GL_TOKEN: "$GL_TOKEN"
   PYFUNCEBLE_AUTO_CONFIGURATION: "YES"
   PYFUNCEBLE_CONFIG_DIR: "$CI_PROJECT_DIR/.pyfunceble"
   PYFUNCEBLE_OUTPUT_LOCATION: "$CI_PROJECT_DIR/.pyfunceble"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
 
 before_script:
-  # We install the development version of PyFunceble.
-  # If you prefer the stable version replace `pyfunceble-dev`
-  # with `pyfunceble`.
-  - pip3 install PyFunceble mypdns
+  - python -V  # Print out python version for debugging
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+  - pip install pyfunceble-dev mypdns
 
 test1:
   stage: test

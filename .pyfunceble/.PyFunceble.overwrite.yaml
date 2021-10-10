@@ -6,7 +6,7 @@ cli_testing:
         commit_message: My Privacy DNS - Temp results
         end_command: null
         end_commit_message: My Privacy DNS - Results
-        max_exec_minutes: 5
+        max_exec_minutes: 1
     days_between:
         db_clean: 120
     display_mode:

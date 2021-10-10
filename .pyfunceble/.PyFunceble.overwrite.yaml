@@ -2,10 +2,8 @@ cli_testing:
     autocontinue: true
     ci:
         active: true
-        branch: master
         command: null
         commit_message: My Privacy DNS - Temp results
-        distribution_branch: master
         end_command: null
         end_commit_message: My Privacy DNS - Results
         max_exec_minutes: 5

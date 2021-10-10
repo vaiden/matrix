@@ -1,7 +1,9 @@
-# Python needed, so we use the python image.
 image: python:latest
 
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
 variables:
+
   PYFUNCEBLE_AUTO_CONFIGURATION: "YES"
   PYFUNCEBLE_CONFIG_DIR: "$CI_PROJECT_DIR/.pyfunceble"
   PYFUNCEBLE_OUTPUT_LOCATION: "$CI_PROJECT_DIR/.pyfunceble"
@@ -18,14 +20,8 @@ before_script:
   - pip install virtualenv
   - virtualenv venv
   - source venv/bin/activate
-  - pip install pyfunceble-dev mypdns
+  - pip install pyfunceble-dev
 
-test1:
-  stage: test
+run:
   script:
-    # Let's say we want our results and our PyFunceble
-    # infrastructure to be saved in a directory called `PyFunceble-tests`
-
-    # We move inside it.
-    - cd "$CI_PROJECT_DIR"
     - pyfunceble --ci --syntax --no-files -f "$CI_PROJECT_DIR/source/adware/domains.list" "$CI_PROJECT_DIR/source/adware/wildcard.list" --ci-max-minutes 5

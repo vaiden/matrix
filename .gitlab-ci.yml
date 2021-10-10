@@ -24,4 +24,4 @@ before_script:
 
 run:
   script:
-    - pyfunceble --ci --syntax --no-files -f "$CI_PROJECT_DIR/source/adware/domains.list" "$CI_PROJECT_DIR/source/adware/wildcard.list" --ci-max-minutes 5
+    - PyFunceble --ci -f https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/Phishing.Database/master/domains.list --ci-max-minutes 1

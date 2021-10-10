@@ -1016,6 +1016,7 @@
         "dev-myqnapcloud.com",
         "dev.adobeaemcloud.com",
         "devcdnaccesso.com",
+        "digitaloceanspaces.com",
         "ditchyourip.com",
         "dnsalias.com",
         "dnsdojo.com",
@@ -1154,6 +1155,7 @@
         "impertrixcdn.com",
         "indowapblog.com",
         "instance.datadetect.com",
+        "ip.linodeusercontent.com",
         "is-a-anarchist.com",
         "is-a-blogger.com",
         "is-a-bookkeeper.com",
@@ -1870,7 +1872,8 @@
     ],
     "goog": [
         "cloud.goog",
-        "translate.goog"
+        "translate.goog",
+        "usercontent.goog"
     ],
     "gp": [
         "app.gp",
@@ -2219,7 +2222,9 @@
         "stolos.io",
         "sys.qcx.io",
         "telebit.io",
+        "tickets.io",
         "uk0.bigv.io",
+        "upli.io",
         "utwente.io",
         "vaporcloud.io",
         "virtualserver.io",
@@ -5634,7 +5639,6 @@
         "cdn77-ssl.net",
         "centralus.azurestaticapps.net",
         "channelsdvr.net",
-        "clic2000.net",
         "clickrising.net",
         "cloudaccess.net",
         "cloudapp.net",
@@ -7884,10 +7888,7 @@
         "org.tm"
     ],
     "tn": [
-        "agrinet.tn",
         "com.tn",
-        "defense.tn",
-        "edunet.tn",
         "ens.tn",
         "fin.tn",
         "gov.tn",
@@ -7900,11 +7901,7 @@
         "orangecloud.tn",
         "org.tn",
         "perso.tn",
-        "rnrt.tn",
-        "rns.tn",
-        "rnu.tn",
-        "tourism.tn",
-        "turen.tn"
+        "tourism.tn"
     ],
     "to": [
         "611.to",
@@ -7919,6 +7916,9 @@
         "oya.to",
         "rdv.to",
         "vpnplus.to"
+    ],
+    "today": [
+        "prequalifyme.today"
     ],
     "top": [
         "now-dns.top",

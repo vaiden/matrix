@@ -28,3 +28,6 @@ danilo82.sh
 no-git/**
 scripts/easylistloop.sh
 LICENSE.agpl2
+
+# Cache related.
+.cache/

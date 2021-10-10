@@ -29,4 +29,4 @@ before_script:
 
 run:
   script:
-    - PyFunceble --ci -f https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/Phishing.Database/master/domains.list --ci-max-minutes 1 --ci-branch gitlab-ci.pyfunceble4.scheduled --ci-distribution-branch gitlab-ci.pyfunceble4.scheduled
+    - PyFunceble -f https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/Phishing.Database/master/domains.list --ci-max-minutes 1 --ci-branch gitlab-ci.pyfunceble4.scheduled --ci-distribution-branch gitlab-ci.pyfunceble4.scheduled

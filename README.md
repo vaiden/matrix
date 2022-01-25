@@ -27,7 +27,7 @@ Ex. `google.*` which belongs to several groups as they represent all
 online evil, when we talk about privacy and anti-brainwashing/manipulation;
 Facebook is also well represented in several categories.
 
-# Categorising
+# Categorizing
 Each sub-folder of `sources` should contain it's own README which in
 short describes what the list is all about and the criteria to add a domain
 into it's `domain.list` or `wildcard.list`.
@@ -35,7 +35,7 @@ into it's `domain.list` or `wildcard.list`.
 # Submitting
 ## File structure and Category explained
 
-This list is ophold in relation to https://mypdns.org/infrastructure/workboard/-/issues/14
+This list is on hold in relation to https://mypdns.org/infrastructure/workboard/-/issues/14
 
 | Category                   | description                                                                                                                                                                                                                                                                                                                                                                                      |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -152,6 +152,16 @@ already for leaking privacy to third party.
 3) Through this repository's issue board, we're trying our best to give
    people the right information for them to decide whether or not they
    should allow access to some domains, despite them being marked as bad."
+
+**Q**: Your issue has been recognized as spam and has been discarded.
+
+**A**: Yep sorry about that, it happens when you are trying to commit
+	   issue number x by using the templates, then the Akismet spam
+	   system kicks in and generate a lot of fuzz.
+
+	   When, not if, this happens to you, please send a note in the
+	   support ticket here: https://mypdns.org/mypdns/support/-/issues/268
+	   and we will get your account "Released".
 
 
 [AdWare]: https://mypdns.org/my-privacy-dns/matrix/-/issues/new?issuable_template=AdWare "Issue template to commit adserver domains"
